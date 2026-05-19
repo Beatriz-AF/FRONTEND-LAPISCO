@@ -46,3 +46,19 @@ const clima = "Nublado";
     else{
         descricao.innerHTML = clima;
     }
+    
+const botaoTema = document.getElementById("toggleTema");
+
+botaoTema.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        botaoTema.innerHTML = "☀️";
+    }
+
+    else{
+        botaoTema.innerHTML = "🌙";
+    }
+
+});

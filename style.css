@@ -7,13 +7,13 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    background: var(--bg-gradiente);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 40px;
     padding-bottom: 40px;
-    color: white;
+    color: var(--texto);
 }
 
 .container{
@@ -27,10 +27,79 @@ body{
     font-size: 2rem;
 }
 
+.topo-site{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+:root{
+    --bg-gradiente: linear-gradient(135deg, #4facfe, #00f2fe);
+
+    --card-bg: rgba(255,255,255,0.15);
+
+    --texto: white;
+
+    --input-bg: white;
+
+    --input-texto: black;
+}
+
+.dark{
+    --bg-gradiente: linear-gradient(135deg, #141e30, #243b55);
+
+    --card-bg: rgba(0,0,0,0.3);
+
+    --texto: white;
+
+    --input-bg: #1f1f1f;
+
+    --input-texto: white;
+}
+
+.area-tema{
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.area-tema p{
+    font-size: 0.8rem;
+
+    font-weight: bold;
+}
+
+#toggleTema{
+    width: 50px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
 .busca{
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.dark .busca button{
+    color: #141e30;
 }
 
 .busca input{
@@ -40,25 +109,34 @@ body{
     border-radius: 10px;
     outline: none;
     font-size: 1rem;
+    background: var(--input-bg);
+    color: var(--input-texto);
 }
 
 .busca button{
     padding: 12px 18px;
     border: none;
     border-radius: 10px;
-    background-color: #ffffff;
     color: #0099ff;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    .busca button{
+    background: var(--input-bg);
+    color: var(--input-texto);
+}
 }
 
 .busca button:hover{
     background-color: #dff6ff;
 }
 
+.dark .busca button:hover{
+    background-color: #dcdcdd94;
+}
+
 .card-clima{
-    background: rgba(255,255,255,0.15);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
