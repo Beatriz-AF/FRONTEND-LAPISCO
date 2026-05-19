@@ -1,3 +1,24 @@
+const clima = "Chuva"; 
+ //mudar clima com API
+
+    const descricao = document.getElementById("descricao-clima");
+
+    if(clima === "Ensolarado"){
+        descricao.innerHTML = "Ensolarado ☀️";
+    }
+
+    else if(clima === "Chuva"){
+        descricao.innerHTML = "Chovendo 🌧️";
+    }
+
+    else if(clima === "Nublado"){
+        descricao.innerHTML = "Nublado ☁️";
+    }
+
+    else{
+        descricao.innerHTML = clima;
+    }
+
 const ctx = document.getElementById('graficoTemperatura');
 
 new Chart(ctx, {
@@ -26,27 +47,7 @@ new Chart(ctx, {
     }
 });
 
-const clima = "Nublado"; 
- //mudar clima com API
 
-    const descricao = document.getElementById("descricao-clima");
-
-    if(clima === "Ensolarado"){
-        descricao.innerHTML = "Ensolarado ☀️";
-    }
-
-    else if(clima === "Chuva"){
-        descricao.innerHTML = "Chovendo 🌧️";
-    }
-
-    else if(clima === "Nublado"){
-        descricao.innerHTML = "Nublado ☁️";
-    }
-
-    else{
-        descricao.innerHTML = clima;
-    }
-    
 const botaoTema = document.getElementById("toggleTema");
 
 botaoTema.addEventListener("click", () => {

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima Agora</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,15 +12,12 @@
     <div class="container">
 
         <div class="topo-site">
-
-    <h1 class="titulo">Consulta Meteorológica</h1>
-
-    <div class="area-tema">
-        <p>Tema</p>
-        <button id="toggleTema">🌙</button>
-    </div>
-
-</div>
+            <h1 class="titulo">Consulta Meteorológica</h1>
+            <div class="area-tema">
+                <p>Tema</p>
+                <button id="toggleTema">🌙</button>
+            </div>
+        </div>
 
         <div class="busca">
             <input type="text" placeholder="Digite uma cidade...">
@@ -60,17 +56,64 @@
 
         </div>
 
-        <div class="grafico-container">
-            <h2 class="titulo-grafico">Previsão dos Próximos 7 Dias</h2>
+        <div class="layout-inferior">
 
-            <canvas id="graficoTemperatura"></canvas>
+            <div class="previsao-futura">
+
+                <h2>Próximos Dias</h2>
+
+                <div class="dias-container">
+
+                    <div class="dia-card">
+                        <h3>Seg</h3>
+                        <p>☀️</p>
+                        <span>32°C / 24°C</span>
+                    </div>
+
+                    <div class="dia-card">
+                        <h3>Ter</h3>
+                        <p>🌧️</p>
+                        <span>29°C / 22°C</span>
+                    </div>
+
+                    <div class="dia-card">
+                        <h3>Qua</h3>
+                        <p>☁️</p>
+                        <span>30°C / 23°C</span>
+                    </div>
+
+                    <div class="dia-card">
+                        <h3>Qui</h3>
+                        <p>☀️</p>
+                        <span>33°C / 25°C</span>
+                    </div>
+
+                    <div class="dia-card">
+                        <h3>Sex</h3>
+                        <p>☀️</p>
+                        <span>33°C / 25°C</span>
+                    </div>
+
+                    <div class="dia-card">
+                        <h3>Sáb</h3>
+                        <p>☀️</p>
+                        <span>33°C / 25°C</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grafico-container">
+                <h2 class="titulo-grafico">Previsão dos Próximos 7 Dias</h2>
+                <canvas id="graficoTemperatura"></canvas>
+            </div>
+
         </div>
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
     <script src="script.js"></script>
 
 </body>
